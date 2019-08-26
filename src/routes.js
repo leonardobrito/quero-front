@@ -1,9 +1,9 @@
-import Home from '@/views/Home/index.vue';
+import Favority from '@/views/Favority/index.vue';
 
 export default [
   {
     path: '/',
-    name: 'home',
-    component: Home
-  }
+    name: 'Favority',
+    component: Favority,
+  },
 ];
