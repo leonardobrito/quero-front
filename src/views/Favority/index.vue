@@ -7,12 +7,22 @@
         melhores ofertas disponíveis.
       </p>
     </div>
+
+    <Semesters />
+    <NewFavorite />
   </div>
 </template>
 
 <script>
+import NewFavorite from '@/components/NewFavorite/index.vue';
+import Semesters from '@/components/Semesters/index.vue';
+
 export default {
   name: 'Favority',
+  components: {
+    NewFavorite,
+    Semesters,
+  },
 };
 </script>
 

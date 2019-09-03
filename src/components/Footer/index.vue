@@ -1,13 +1,15 @@
 <template>
   <footer class="container">
     <div class="contact">
-      <font-awesome-icon icon="comment" />
+      <div>
+        <font-awesome-icon icon="comment" />
+      </div>
       <div>
         <span>0800 123 2222</span>
         <p>Segunda a sexta de 8h às 22h</p>
       </div>
     </div>
-    <div>
+    <div class="helpers">
       <div>
         <font-awesome-icon icon="comments" />Chat
       </div>
@@ -18,7 +20,7 @@
         <font-awesome-icon icon="info-circle" />Ajuda
       </div>
     </div>
-    <div>
+    <div class="message">
       Feito com
       <font-awesome-icon icon="heart" />pela Quero Educação
     </div>
@@ -27,7 +29,6 @@
 
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import {
   faComment,
   faComments,
@@ -54,27 +55,67 @@ export default {
   margin-bottom: 0;
 
   div {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
     min-height: 60px;
-    padding: 0 20px;
-
-    svg {
-      margin: 0 5px;
-    }
-
-    &:last-child {
-      justify-content: center;
-    }
   }
 }
 
 .contact {
+  align-items: center;
   background-color: #007a8d;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
   div {
+    align-items: flex-start;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      align-items: flex-end;
+      margin-left: 30px;
+    }
+  }
+}
+
+.helpers {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  div {
+    align-items: center;
+    background-color: #007a8d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 4px 2px;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.message {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  svg {
+    margin: 0 5px;
   }
 }
 </style>
